@@ -79,12 +79,18 @@ const animalPoke = [
 function App() {
   return (
     <div className='App'>
-      <div className='showcase'>
-        <PokemonCard animal={animalPoke[0]}/>
-        <Body content="Julián López"/>
+      <div className='showCase'>
+        {
+          animalPoke.map((item,idx)=>{
+            return <PokemonCard animal={item}/>
+          })
+      }
       </div>
+      <Body content="Julián López"/>
     </div>
   );
 }
+
+//<PokemonCard animal={animalPoke[0]}/>
 
 export default App;

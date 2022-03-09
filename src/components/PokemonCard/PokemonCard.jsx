@@ -9,18 +9,18 @@ const PokemonCard = (props) => {
     const keys = Object.keys(animal);
 
     return (
-        <div>
+        <div className="containerCard">
             <h1 className="titulo">
                 {keys[0] + ': ' + animal.name}
             </h1>
             <h2>{keys[1] + ': ' + animal.order}</h2>
-            <img src={animal.image} />
+            <img src={animal.image} className="imagem"/>
             {
                 animal.stats.map((item, idx) => {
-                    return <h2>{item.name +': '+ item.base_stat}</h2>
+                    return <h3>{item.name +': '+ item.base_stat}</h3>
                 })
             }
-            <h2>{keys[4] + ': ' + animal.weight}</h2>
+            <h3>{keys[4] + ': ' + animal.weight}</h3>
 
         </div>
     );

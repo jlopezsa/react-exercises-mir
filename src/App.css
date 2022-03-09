@@ -1,17 +1,18 @@
 .App {
+  background-color: aqua;
   align-items: center;
-  /* background: rgb(36, 40, 47); */
-  display: flex;
-  justify-content: center;
-  min-height: calc(50vh - 60px);
-  padding: 4.5rem 0px;
+  /*min-height: calc(50vh - 60px);*/
+  /*padding: 4.5rem 0px;*/
   text-align: center;
 }
 
-.showcase {
+.showCase {
+  background-color: blueviolet;
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  /* display: flex; */
   flex-wrap: wrap;
-  justify-content: center;
   max-width: 1920px;
 }
