@@ -1,23 +1,34 @@
 import React from "react"
 import './PokemonCardStyles.scss'
 
-
 const PokemonCard = (props) => {
     console.log("Verificando que tiene props", props)
     console.log("Verificando keys", Object.keys(props))
-    
+
     const { animal } = props; // Destructuración
-    
+    const keys = Object.keys(animal);
+
     return (
         <div>
             <h1 className="titulo">
-                {animal.name}
+                {keys[0] + ': ' + animal.name}
             </h1>
-            <h2>{animal.order}</h2> 
-            <h2>{animal.stats[0].name}</h2>            
-            <h2>{animal.stats[0].base_stat}</h2>            
+            <h2>{keys[1] + ': ' + animal.order}</h2>
+            <img src={animal.image} />
+            {
+                animal.stats.map((item, idx) => {
+                    return <h2>{item.name +': '+ item.base_stat}</h2>
+                })
+            }
+            <h2>{keys[4] + ': ' + animal.weight}</h2>
+
         </div>
     );
 }
-
+/*
+<h2>{animal.stats[0].name + ': '+ animal.stats[0].base_stat}</h2>
+<h2>{animal.stats[1].name + ': '+ animal.stats[1].base_stat}</h2>
+<h2>{animal.stats[2].name + ': '+ animal.stats[2].base_stat}</h2>
+<h2>{animal.stats[3].name + ': '+ animal.stats[3].base_stat}</h2>
+*/
 export default PokemonCard
