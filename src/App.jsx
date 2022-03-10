@@ -1,6 +1,7 @@
 import PokemonCard from './components/PokemonCard/PokemonCard';
 import Body from './components/Body';
-
+import OnionHater from './components/OnionHater';
+import Destinity from './components/Destiny'
 import './App.css';
 
 const animalPoke = [
@@ -79,6 +80,7 @@ const animalPoke = [
 function App() {
   return (
     <div className='App'>
+      <h2>Ejercicio que crea tarjetas a partir de objetos que se reciben desde un vector de objetos</h2>
       <div className='showCase'>
         {
           animalPoke.map((item,idx)=>{
@@ -87,10 +89,13 @@ function App() {
       }
       </div>
       <Body content="Julián López"/>
+      <h2>Ejercicio que identifica cuando el usuario ingresa la palabra "cebolla" en un TextArea </h2>
+      <OnionHater />
+      <hr />
+      <h2>Ejercicio Destinity: crea un select con un listado de ciudades.</h2>
+      <Destinity />
     </div>
   );
 }
-
-//<PokemonCard animal={animalPoke[0]}/>
 
 export default App;
