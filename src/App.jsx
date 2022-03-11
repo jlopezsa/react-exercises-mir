@@ -2,6 +2,7 @@ import PokemonCard from './components/PokemonCard/PokemonCard';
 import Body from './components/Body';
 import OnionHater from './components/OnionHater';
 import Destinity from './components/Destiny'
+import DestinityStates from './components/DestinityStates';
 import './App.css';
 
 const animalPoke = [
@@ -80,6 +81,8 @@ const animalPoke = [
 function App() {
   return (
     <div className='App'>
+      <h1>Ejercicios usando componentes en React</h1>
+      <hr />
       <h2>Ejercicio que crea tarjetas a partir de objetos que se reciben desde un vector de objetos</h2>
       <div className='showCase'>
         {
@@ -89,11 +92,15 @@ function App() {
       }
       </div>
       <Body content="Julián López"/>
+      <hr />
       <h2>Ejercicio que identifica cuando el usuario ingresa la palabra "cebolla" en un TextArea </h2>
       <OnionHater />
       <hr />
       <h2>Ejercicio Destinity: crea un select con un listado de ciudades.</h2>
       <Destinity />
+      <hr />
+      <h2>Exercise Destinity with state variable: crea un select con un listado de ciudades e imprimir en la misma web.</h2>
+      <DestinityStates />
     </div>
   );
 }
