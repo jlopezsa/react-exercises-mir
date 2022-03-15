@@ -1,22 +1,11 @@
-import React from "react"
+import React from 'react';
 
-function Body(props){
-    return(
-        <div>
-            {props.content}
-        </div>
-    )        
+function Body() {
+  return (
+    <div>
+      <h1>Hello body</h1>
+    </div>
+  );
 }
 
-// misma función usando arrow functions
-/* 
-const Body = (props) => {
-    return (
-      <div>
-        {props.content}
-      </div>
-    )
-}
-*/
-
-export default Body
+export default Body;

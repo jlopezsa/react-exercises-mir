@@ -1,6 +1,3 @@
-import PokemonCard from './PokemonCard'
+import PokemonCard from './PokemonCard';
 
-export default PokemonCard
-
-
-
+export default PokemonCard;
