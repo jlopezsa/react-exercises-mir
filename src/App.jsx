@@ -1,107 +1,36 @@
 import PokemonCard from './components/PokemonCard/PokemonCard';
 import Body from './components/Body';
 import OnionHater from './components/OnionHater';
-import Destinity from './components/Destiny'
-import DestinityStates from './components/DestinityStates';
-import './App.css';
+import HomePage from './pages/Home'
+import ExerOnionHater from './pages/ExerOnionHater'
+import ExerDestinity from './pages/ExerDestinity'
+import ExerPokemon from './pages/ExerPokemon'
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 
-const animalPoke = [
-  {
-    "name": "bulbasaur",
-    "order": 1,
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
-    "stats": [{
-      "name": "hp",
-      "base_stat": 45
-      },
-      {
-        "base_stat": 49,
-        "name": "attack"
-      },
-      {
-        "base_stat": 49,
-        "name": "defense"
-      },
-      {
-        "base_stat": 65,
-        "name": "special-attack"
-      }
-    ],
-    "weight": 69
-  },
-  {
-    "name": "charmander",
-    "order": 4,
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
-    "stats": [{
-      "name": "hp",
-      "base_stat": 39
-      },
-      {
-        "base_stat": 52,
-        "name": "attack"
-      },
-      {
-        "base_stat": 43,
-        "name": "defense"
-      },
-      {
-        "base_stat": 60,
-        "name": "special-attack"
-      }
-    ],
-    "weight": 85
-  },
-  {
-    "name": "squirtle",
-    "order": 7,
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg",
-    "stats": [{
-      "name": "hp",
-      "base_stat": 44
-      },
-      {
-        "base_stat": 48,
-        "name": "attack"
-      },
-      {
-        "base_stat": 65,
-        "name": "defense"
-      },
-      {
-        "base_stat": 50,
-        "name": "special-attack"
-      }
-    ],
-    "weight": 90
-  }
-]
+import './App.css';
 
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Ejercicios usando componentes en React</h1>
-      <hr />
-      <h2>Ejercicio que crea tarjetas a partir de objetos que se reciben desde un vector de objetos</h2>
-      <div className='showCase'>
-        {
-          animalPoke.map((item,idx)=>{
-            return <PokemonCard animal={item}/>
-          })
-      }
-      </div>
-      <Body content="Julián López"/>
-      <hr />
-      <h2>Ejercicio que identifica cuando el usuario ingresa la palabra "cebolla" en un TextArea </h2>
-      <OnionHater />
-      <hr />
-      <h2>Ejercicio Destinity: crea un select con un listado de ciudades.</h2>
-      <Destinity />
-      <hr />
-      <h2>Exercise Destinity with state variable: crea un select con un listado de ciudades e imprimir en la misma web.</h2>
-      <DestinityStates />
-    </div>
+      <>
+        <BrowserRouter>
+          <nav>
+            <ul>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/ExerOnionHater'>OnionHater</Link></li>
+              <li><Link to='/ExerDestinity'>ExerDestinity</Link></li>
+              <li><Link to='/ExerPokemon'>OnionHater</Link></li>
+            </ul>
+          </nav>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/ExerOnionHater" element={<ExerOnionHater />} />
+            <Route path="/ExerDestinity" element={<ExerDestinity />} />
+            <Route path="/ExerPokemon" element={<ExerPokemon />} />
+          </Routes>
+        </BrowserRouter>
+      </>
+      
   );
 }
 

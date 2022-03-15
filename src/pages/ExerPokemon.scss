@@ -1,0 +1,19 @@
+/*http://brandcolors.net/*/
+
+.container-pokecard {
+  background-color: #799eb2;
+  align-items: center;
+  /*min-height: calc(50vh - 60px);*/
+  /*padding: 4.5rem 0px;*/
+  text-align: center;
+}
+.showCase {
+    background-color: #799eb2;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /*max-width: 1800px;*/
+  }

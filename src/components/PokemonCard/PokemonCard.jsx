@@ -9,6 +9,7 @@ const PokemonCard = (props) => {
     const keys = Object.keys(animal);
 
     return (
+        
         <div className="containerCard">
             <h1 className="titulo">
                 {keys[0] + ': ' + animal.name}
